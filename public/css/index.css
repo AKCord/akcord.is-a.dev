@@ -3,8 +3,8 @@ body .menu-content .item a:link,
 body .menu-content .item a:visited,
 body .menu-content .item a:hover,
 body .menu-content .item a:active {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 body {
   background-color: #212121;
@@ -109,105 +109,96 @@ body::before {
 }
 
 .menu {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    position: fixed;
-    top: 50%;
-    left: 2rem;
-    z-index: 15;
-    transform: translateY(-50%);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  position: fixed;
+  top: 50%;
+  left: 2rem;
+  z-index: 15;
+  transform: translateY(-50%);
 }
 
 .menu-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .item {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
 }
 
 .circle {
-    background-color: beige;
-    width: 0.5rem;
-    height: 0.5rem;
-    display: inline-block;
-    border-radius: 100rem;
+  background-color: beige;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+  border-radius: 100rem;
 }
 
-.item span, a {
-    transition: all .2s;
+.item span,
+a {
+  transition: all 0.2s;
 }
 
 .item:hover span:last-child {
-    transform: scale(1.2) translateX(9%);
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(255, 230, 0),
-    0 0 82px rgb(255, 234, 0),
-    0 0 92px rgb(217, 255, 0),
-    0 0 102px rgb(200, 255, 0),
+  transform: scale(1.2) translateX(9%);
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(255, 230, 0), 0 0 82px rgb(255, 234, 0),
+    0 0 92px rgb(217, 255, 0), 0 0 102px rgb(200, 255, 0),
     0 0 151px rgb(195, 255, 0);
 }
 
 .item:hover a:last-child {
-    transform: scale(1.2) translateX(9%);
-    text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px rgb(255, 230, 0),
-    0 0 82px rgb(255, 234, 0),
-    0 0 92px rgb(217, 255, 0),
-    0 0 102px rgb(200, 255, 0),
+  transform: scale(1.2) translateX(9%);
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(255, 230, 0), 0 0 82px rgb(255, 234, 0),
+    0 0 92px rgb(217, 255, 0), 0 0 102px rgb(200, 255, 0),
     0 0 151px rgb(195, 255, 0);
 }
 
 .rwd-menu {
-    display: none;
-    position: fixed;
-    right: 1rem;
-    top: 1rem;
-    z-index: 15;
+  display: none;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 15;
 }
 
 .toggle-menu {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center;
-    padding: 20%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  padding: 20%;
 }
 
-@media screen and (max-width:620px) {
-    .heading {
-        font-size: 2.5rem;
-    }
-    .menu {
-        display: none;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border: 1px solid red;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    .rwd-menu {
-        display: block;
-    }
+@media screen and (max-width: 620px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .menu {
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid red;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .rwd-menu {
+    display: block;
+  }
 }
 
-@media screen and (max-width:880px) {
-    .menu {
-        transform: unset !important;
-    }
+@media screen and (max-width: 880px) {
+  .menu {
+    transform: unset !important;
+  }
 }
 
 .content .title {
@@ -306,7 +297,6 @@ body::before {
   font-size: 35px;
 }
 
-
 .projects .cells {
   display: flex;
   justify-content: center;
@@ -330,23 +320,23 @@ body::before {
   width: 50px;
   height: 50px;
   object-fit: cover;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .projects .cells-projects span {
   font-size: 18px;
-  white-space: nowrap; 
-  overflow-wrap: break-word; 
+  white-space: nowrap;
+  overflow-wrap: break-word;
 }
 
 .projects .cell-projects .separator {
-    font-size: 16px;
-    margin: 0 5px; 
+  font-size: 16px;
+  margin: 0 5px;
 }
 
 .projects .cell-projects .link {
-      text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .button {
@@ -359,20 +349,19 @@ body::before {
   border-radius: 34px;
   background-color: transparent;
   font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
 }
 
 .button a {
-  color: inherit; /* Inherit color from parent element */
-  text-decoration: none; /* Remove underline */
-  background: none; /* Remove background if any */
-  border: none; /* Remove border if any */
+  color: inherit;
+  text-decoration: none;
+  background: none;
+  border: none;
 }
 
-
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   margin: auto;
@@ -382,7 +371,7 @@ body::before {
   scale: 0;
   z-index: -1;
   background-color: beige;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .button:hover::before {
