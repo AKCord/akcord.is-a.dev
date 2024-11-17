@@ -1,0 +1,105 @@
+body {
+  font-family: "Inter", sans-serif;
+  position: relative;
+  background-color: black;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gradient-text {
+  background: linear-gradient(205deg, #ffffff, #888686);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+header {
+  min-height: 90vh;
+}
+
+.content {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.6s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#about,
+#experience,
+#techstack,
+#projects {
+  position: relative;
+  padding-bottom: 4px;
+  cursor: pointer;
+  transition: color 0.8s ease;
+}
+
+#about::after,
+#experience::after,
+#techstack::after,
+#projects::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: width 0.8s ease;
+}
+
+#about:hover,
+#experience:hover,
+#techstack:hover,
+#projects:hover {
+  color: #ffffff;
+}
+
+#about:hover::after,
+#experience:hover::after,
+#techstack:hover::after,
+#projects:hover::after {
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

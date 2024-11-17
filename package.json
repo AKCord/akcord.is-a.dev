@@ -1,9 +1,18 @@
 {
+  "name": "akcord.is-a.dev",
+  "version": "1.0.1",
+  "description": "AKCord's Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "AKCord",
+  "license": "ISC",
   "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.19.2",
-    "helmet": "^7.1.0",
-    "morgan": "^1.10.0",
-    "winston": "^3.14.2"
+    "compression": "^1.7.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "path": "^0.12.7"
   }
 }
