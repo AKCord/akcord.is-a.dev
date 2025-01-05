@@ -27,13 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
 `,
 
     experience: `
-      <section
+     <section
         id="experience"
-        class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 fade-in"
+        class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in"
       >
-        <div class="space-y-6">
+        <!-- LiteClash Card -->
+        <div class="space-y-6 flex justify-center">
           <div
-            class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full transform hover:scale-105"
           >
             <div class="flex items-center space-x-6 mb-6">
               <div class="w-16 h-16 rounded-full overflow-hidden">
@@ -43,31 +44,29 @@ document.addEventListener("DOMContentLoaded", () => {
                   class="w-full h-full object-cover"
                 />
               </div>
-
               <div>
                 <p class="text-2xl font-semibold text-gray-200">
                   LiteClash - A Discord-Based Casino
                 </p>
               </div>
             </div>
-
             <div class="text-sm text-gray-400 leading-relaxed mb-4">
               <p>
-                Owner of LiteClash, one of the first Discord-based casinos,
-                bringing a unique gaming experience to Discord.
+                Owner and developer of LiteClash, a unique Discord-based casino
+                providing an exciting gaming experience for users worldwide.
               </p>
             </div>
-
-            <div class="mt-4">
+            <div class="mt-auto">
               <p class="text-sm text-gray-500">Role: Owner / Developer</p>
               <p class="text-sm text-gray-500">Timeline: 2024-</p>
             </div>
           </div>
         </div>
 
-        <div class="space-y-6">
+        <!-- Kindo Card -->
+        <div class="space-y-6 flex justify-center" id="kindoCard">
           <div
-            class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full transform hover:scale-105"
           >
             <div class="flex items-center space-x-6 mb-6">
               <div class="w-16 h-16 rounded-full overflow-hidden">
@@ -77,31 +76,29 @@ document.addEventListener("DOMContentLoaded", () => {
                   class="w-full h-full object-cover"
                 />
               </div>
-
               <div>
                 <p class="text-2xl font-semibold text-gray-200">
                   Kindo - A Discord Bot
                 </p>
               </div>
             </div>
-
             <div class="text-sm text-gray-400 leading-relaxed mb-4">
               <p>
-                The first discord bot I had ever published publicly, it had
-                features like: moderation system, searching the website etc.
+                The first public Discord bot I developed, featuring moderation
+                tools, website search functions, and more.
               </p>
             </div>
-
-            <div class="mt-4">
+            <div class="mt-auto">
               <p class="text-sm text-gray-500">Role: Owner + Developer</p>
               <p class="text-sm text-gray-500">Timeline: 2021-2022</p>
             </div>
           </div>
         </div>
 
-        <div class="space-y-6 md:col-span-2 flex justify-center mt-3">
+        <!-- Kcvdh Card -->
+        <div class="space-y-6 flex justify-center">
           <div
-            class="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full transform hover:scale-105"
           >
             <div class="flex items-center space-x-6 mb-6">
               <div class="w-16 h-16 rounded-full overflow-hidden">
@@ -111,24 +108,54 @@ document.addEventListener("DOMContentLoaded", () => {
                   class="w-full h-full object-cover"
                 />
               </div>
-
               <div>
                 <p class="text-2xl font-semibold text-gray-200">
-                  kcvdh.com - Developer's team
+                  kcvdh.com - Developer's Team
                 </p>
               </div>
             </div>
-
             <div class="text-sm text-gray-400 leading-relaxed mb-4">
               <p>
-                A Discord server that connects developers, artists, builders,
-                modellers, etc., in one team for collaboration on projects.
+                A collaborative Discord server uniting developers, designers,
+                and creators to work on exciting projects together.
               </p>
             </div>
-
-            <div class="mt-4">
+            <div class="mt-auto">
               <p class="text-sm text-gray-500">Role: Partner</p>
               <p class="text-sm text-gray-500">Timeline: 2024-2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- StarDevs Card -->
+        <div class="space-y-6 flex justify-center" id="stardevsCard">
+          <div
+            class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full transform hover:scale-105"
+          >
+            <div class="flex items-center space-x-6 mb-6">
+              <div class="w-16 h-16 rounded-full overflow-hidden">
+                <img
+                  src="imgs/experiences/stardevs.webp"
+                  alt="StarDevs Logo"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <p class="text-2xl font-semibold text-gray-200">
+                  StarDevs - Developers Marketplace
+                </p>
+              </div>
+            </div>
+            <div class="text-sm text-gray-400 leading-relaxed mb-4">
+              <p>
+                A marketplace for developers to connect with clients or other
+                developers for collaboration on projects, coding tasks, and
+                more.
+              </p>
+            </div>
+            <div class="mt-auto">
+              <p class="text-sm text-gray-500">Role: Bot Developer</p>
+              <p class="text-sm text-gray-500">Timeline: 2025-</p>
             </div>
           </div>
         </div>
@@ -243,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </section>`,
 
     projects: `
-        <div class="flex items-center p-6 bg-gray-900 rounded-lg shadow-lg">
+      <div class="flex items-center p-6 bg-gray-900 rounded-lg shadow-lg">
         <div class="flex gap-6 overflow-x-auto pb-4">
           <div
             class="flex-shrink-0 w-60 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300"
@@ -337,6 +364,26 @@ document.addEventListener("DOMContentLoaded", () => {
               button-handled controls.
             </p>
           </div>
+          <div
+            class="flex-shrink-0 w-60 p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition duration-300"
+          >
+            <div
+              class="relative mb-6 flex justify-center items-center rounded-full shadow-lg transform hover:scale-110 transition-transform duration-300"
+            >
+              <img
+                src="imgs/projects/stardevs.webp"
+                alt="Swish Icon"
+                class="w-12 h-12 rounded-full object-cover shadow-md"
+              />
+            </div>
+            <h4 class="text-lg font-medium text-white">
+              StarDevs Bot + ModMail
+            </h4>
+            <p class="text-gray-400 text-sm">
+              A posting bot with acceptance system, with a modmail system and a
+              website for transcripts.
+            </p>
+          </div>
         </div>
       </div>`,
   };
@@ -352,21 +399,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 600);
   }, 100);
 
+  const validSections = ["about", "experience", "techstack", "projects"];
+
   document.querySelectorAll("nav ul li").forEach((item) => {
-    item.addEventListener("click", () => {
-      const section = item.id;
+    if (validSections.includes(item.id)) {
+      item.addEventListener("click", () => {
+        const section = item.id;
 
-      contentSection.classList.add("fade-out");
-
-      setTimeout(() => {
-        contentSection.innerHTML = content[section];
-        contentSection.classList.remove("fade-out");
-        contentSection.classList.add("fade-in");
+        contentSection.classList.add("fade-out");
 
         setTimeout(() => {
-          contentSection.classList.remove("fade-in");
+          if (content[section]) {
+            contentSection.innerHTML = content[section];
+          }
+          contentSection.classList.remove("fade-out");
+          contentSection.classList.add("fade-in");
+
+          setTimeout(() => {
+            contentSection.classList.remove("fade-in");
+          }, 500);
         }, 500);
-      }, 500);
-    });
+      });
+    }
   });
 });
