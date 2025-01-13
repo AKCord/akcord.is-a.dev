@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AKCord" />
+    <meta
+      property="og:title"
+      content="random portfolio. &amp; available for hire."
+    />
+    <meta
+      property="og:description"
+      content="nodejs, discord.js, mongodb, firebase, html, css and some knowledge of react, completed lots of projects."
+    />
+    <title>AKCord</title>
+    <link rel="shortcut icon" type="x-icon" href="imgs/logo.jpg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-effect {
+        position: fixed;
+        width: 1000px;
+        height: 1000px;
+        background: radial-gradient(
+          circle,
+          rgba(66, 66, 255, 0.1) 0%,
+          rgba(33, 33, 255, 0) 70%
+        );
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      }
+      .crypto-card {
+        background: rgba(31, 41, 55, 0.8);
+        backdrop-filter: blur(5px);
+        transition: transform 0.3s ease;
+      }
+      .crypto-card:hover {
+        transform: translateY(-5px);
+      }
+      .qr-placeholder {
+        background-color: #374151;
+        aspect-ratio: 1;
+      }
+      .crypto-icon {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+      .crypto-icon:hover {
+        transform: scale(1.1);
+      }
+      .qr-code-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        object-fit: contain;
+        background-color: #374151;
+        padding: 8px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-300">
+    <div class="bg-effect"></div>
+
+    <header class="p-8 text-center fade-in">
+      <h1 class="text-4xl font-bold text-white mb-4">Support My Work</h1>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-4xl">
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Bitcoin -->
+        <div class="crypto-card p-6 rounded-lg shadow-lg">
+          <div class="flex items-center justify-center mb-4">
+            <img
+              src="./imgs/support/bitcoin.svg"
+              alt="Bitcoin"
+              class="crypto-icon"
+            />
+          </div>
+          <h2 class="text-xl font-bold text-center mb-4">Bitcoin (BTC)</h2>
+          <div class="mb-4">
+            <img
+              src="./imgs/support/btc_qr.png"
+              alt="Bitcoin QR Code"
+              class="qr-code-img"
+            />
+          </div>
+          <div class="text-sm bg-gray-800 p-3 rounded break-all">
+            <p class="text-center">
+              bc1qehkn4fzqzq2fk3qqcqcaaejeaj5zzkwdssqpx8
+            </p>
+          </div>
+        </div>
+
+        <!-- Ethereum -->
+        <div class="crypto-card p-6 rounded-lg shadow-lg">
+          <div class="flex items-center justify-center mb-4">
+            <img
+              src="./imgs/support/ethereum.svg"
+              alt="Ethereum"
+              class="crypto-icon"
+            />
+          </div>
+          <h2 class="text-xl font-bold text-center mb-4">Ethereum (ETH)</h2>
+          <div class="mb-4">
+            <img
+              src="./imgs/support/eth_qr.png"
+              alt="Ethereum QR Code"
+              class="qr-code-img"
+            />
+          </div>
+          <div class="text-sm bg-gray-800 p-3 rounded break-all">
+            <p class="text-center">
+              0x7Fa94748d35729680f1eF9FB68200781A454E8E9
+            </p>
+          </div>
+        </div>
+
+        <!-- Litecoin -->
+        <div class="crypto-card p-6 rounded-lg shadow-lg">
+          <div class="flex items-center justify-center mb-4">
+            <img
+              src="./imgs/support/litecoin.svg"
+              alt="Litecoin"
+              class="crypto-icon"
+            />
+          </div>
+          <h2 class="text-xl font-bold text-center mb-4">Litecoin (LTC)</h2>
+          <div class="mb-4">
+            <img
+              src="./imgs/support/ltc_qr.png"
+              alt="Litecoin QR Code"
+              class="qr-code-img"
+            />
+          </div>
+          <div class="text-sm bg-gray-800 p-3 rounded break-all">
+            <p class="text-center">
+              ltc1qpv7pr7z837tdd5qrctfm40u3tcqzvasx8k36wv
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="p-4 flex space-x-3 justify-center">
+      <a
+        href="/github"
+        target="_blank"
+        class="social-icon text-gray-400 p-2 rounded-full transition-all hover:text-gray-100"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.385.6.111.793-.261.793-.579v-2.173c-3.338.726-4.033-1.416-4.033-1.416-.546-1.389-1.333-1.759-1.333-1.759-1.09-.745.083-.73.083-.73 1.205.085 1.839 1.237 1.839 1.237 1.07 1.834 2.809 1.304 3.495.997.107-.774.418-1.305.761-1.604-2.665-.305-5.466-1.333-5.466-5.931 0-1.31.468-2.381 1.235-3.22-.123-.303-.535-1.523.118-3.176 0 0 1.008-.322 3.301 1.228.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.55 3.297-1.228 3.297-1.228.654 1.653.242 2.873.119 3.176.77.839 1.233 1.911 1.233 3.22 0 4.609-2.804 5.624-5.475 5.922.43.371.815 1.102.815 2.222v3.293c0 .321.192.694.799.576 4.767-1.588 8.2-6.084 8.2-11.385 0-6.627-5.373-12-12-12z"
+          />
+        </svg>
+      </a>
+
+      <a
+        href="/discord"
+        target="_blank"
+        class="social-icon text-gray-400 p-2 rounded-full transition-all hover:text-gray-100"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20.317 4.54101C18.7873 3.82774 17.147 3.30224 15.4319 3.00126C15.4007 2.99545 15.3695 3.00997 15.3534 3.039C15.1424 3.4203 14.9087 3.91774 14.7451 4.30873C12.9004 4.02808 11.0652 4.02808 9.25832 4.30873C9.09465 3.90905 8.85248 3.4203 8.64057 3.039C8.62448 3.01094 8.59328 2.99642 8.56205 3.00126C6.84791 3.30128 5.20756 3.82678 3.67693 4.54101C3.66368 4.54681 3.65233 4.5565 3.64479 4.56907C0.533392 9.29283 -0.31895 13.9005 0.0991801 18.451C0.101072 18.4733 0.11337 18.4946 0.130398 18.5081C2.18321 20.0401 4.17171 20.9701 6.12328 21.5866C6.15451 21.5963 6.18761 21.5847 6.20748 21.5585C6.66913 20.9179 7.08064 20.2424 7.43348 19.532C7.4543 19.4904 7.43442 19.441 7.39186 19.4246C6.73913 19.173 6.1176 18.8662 5.51973 18.5178C5.47244 18.4897 5.46865 18.421 5.51216 18.3881C5.63797 18.2923 5.76382 18.1926 5.88396 18.0919C5.90569 18.0736 5.93598 18.0697 5.96153 18.0813C9.88928 19.9036 14.1415 19.9036 18.023 18.0813C18.0485 18.0687 18.0788 18.0726 18.1015 18.091C18.2216 18.1916 18.3475 18.2923 18.4742 18.3881C18.5177 18.421 18.5149 18.4897 18.4676 18.5178C17.8697 18.8729 17.2482 19.173 16.5945 19.4236C16.552 19.4401 16.533 19.4904 16.5538 19.532C16.9143 20.2414 17.3258 20.9169 17.7789 21.5576C17.7978 21.5847 17.8319 21.5963 17.8631 21.5866C19.8241 20.9701 21.8126 20.0401 23.8654 18.5081C23.8834 18.4946 23.8948 18.4742 23.8967 18.452C24.3971 13.1911 23.0585 8.6212 20.3482 4.57004C20.3416 4.5565 20.3303 4.54681 20.317 4.54101ZM8.02002 15.6802C6.8375 15.6802 5.86313 14.577 5.86313 13.222C5.86313 11.8671 6.8186 10.7639 8.02002 10.7639C9.23087 10.7639 10.1958 11.8768 10.1769 13.222C10.1769 14.577 9.22141 15.6802 8.02002 15.6802ZM15.9947 15.6802C14.8123 15.6802 13.8379 14.577 13.8379 13.222C13.8379 11.8671 14.7933 10.7639 15.9947 10.7639C17.2056 10.7639 18.1705 11.8768 18.1516 13.222C18.1516 14.577 17.2056 15.6802 15.9947 15.6802Z"
+          />
+        </svg>
+      </a>
+
+      <a
+        href="/support"
+        target="_blank"
+        class="social-icon text-gray-400 p-2 rounded-full transition-all hover:text-gray-100"
+        title="Support"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+      </a>
+    </footer>
+
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        const bgEffect = document.querySelector(".bg-effect");
+        bgEffect.style.left = `${e.clientX + window.scrollX}px`;
+        bgEffect.style.top = `${e.clientY + window.scrollY}px`;
+      });
+    </script>
+  </body>
+</html>
