@@ -111,20 +111,17 @@
     </footer>
     <style>
       .bg-effect {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
+        position: fixed;
+        width: 1000px;
+        height: 1000px;
         background: radial-gradient(
           circle,
-          rgba(255, 255, 255, 0.15) 10%,
-          rgba(255, 255, 255, 0) 60%
+          rgba(66, 66, 255, 0.1) 0%,
+          rgba(33, 33, 255, 0) 70%
         );
-        border-radius: 90%;
         pointer-events: none;
         transform: translate(-50%, -50%);
-        transition: transform 0.05s ease-out;
+        z-index: 0;
       }
     </style>
     <script>
