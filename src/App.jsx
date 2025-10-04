@@ -2,6 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
 import { navigationItems, socialIcons, sections } from "./components/data";
+import ReactGA from "react-ga4";
+require("dotenv").config(1);
+
+const TRACKING_ID = process.env.GOOGLE_ANALYTICS_ID;
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -10,6 +15,8 @@ const App = () => {
   const sectionRefs = useRef({});
 
   useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -62,19 +69,19 @@ const App = () => {
   };
 
   // render for mobile
-  if (isMobile) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white p-4 text-center">
-        <h1 className="text-2xl">
-          This webpage is not supported on mobile devices.
-        </h1>
-      </div>
-    );
-  }
+  // if (isMobile) {
+  //   return (
+  //     <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white p-4 text-center">
+  //       <h1 className="text-2xl">
+  //         This webpage is not supported on mobile devices.
+  //       </h1>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="flex min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-      <div className="w-80 flex-shrink-0">
+      <div className="w-20 flex-shrink-0">
         <Sidebar
           activeSection={activeSection}
           navigationItems={navigationItems}

@@ -66,6 +66,33 @@ const experienceData = [
     ],
   },
   {
+    title: "Head Engineer",
+    company: "StarDevs",
+    period: "2025 - PRESENT",
+    description:
+      "A marketplace for developers to connect with clients or other developers for collaboration on projects, coding tasks, and more.",
+    techStack: [
+      { name: "Discord.js", icon: DiscordJS },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Typescript", icon: SiTypescript },
+    ],
+    link: "https://discord.gg/5Y43CtABaB",
+  },
+  {
+    title: "Bot Deveoper",
+    company: "Fudoato",
+    period: "2025 - PRESENT",
+    description:
+      "A marketplace for developers to connect with clients or other developers for collaboration on projects, coding tasks, and more.",
+    techStack: [
+      { name: "Discord.js", icon: DiscordJS },
+      { name: "MongoDB", icon: SiMongodb },
+      { name: "Node.js", icon: SiNodedotjs },
+    ],
+    link: "https://discord.gg/rAkd323J",
+  },
+  {
     title: "Senior Developer",
     company: "kcvdh.com",
     period: "2020 - 2022",
@@ -79,24 +106,11 @@ const experienceData = [
     ],
   },
   {
-    title: "Senior Engineer",
-    company: "StarDevs",
-    period: "2025 - PRESENT",
-    description:
-      "A marketplace for developers to connect with clients or other developers for collaboration on projects, coding tasks, and more.",
-    techStack: [
-      { name: "Discord.js", icon: DiscordJS },
-      { name: "MongoDB", icon: SiMongodb },
-      { name: "Node.js", icon: SiNodedotjs },
-      { name: "Typescript", icon: SiTypescript },
-    ],
-  },
-  {
     title: "Lead Developer / Owner",
     company: "LiteClash",
-    period: "2024 - PRESENT",
+    period: "2024 - 2025",
     description:
-      "A marketplace for developers to connect with clients or other developers for collaboration on projects, coding tasks, and more.",
+      "A discord-based casino which was heavily influenced by Litecoin, with basic cryptography.",
     techStack: [
       { name: "React", icon: SiReact },
       { name: "TypeScript", icon: SiTypescript },
@@ -112,35 +126,48 @@ const experienceData = [
 
 const ExperienceContent = () => {
   return (
-    <div className="space-y-12">
-      <div className="space-y-4">
-        <h2 className="text-5xl font-light text-white">experience</h2>
-        <div className="w-25 h-0.5 bg-gradient-to-r from:white to-gray-400 mt-4"></div>
-        <p className="text-gray-400 text-lg">
+    <div className="space-y-6 md:space-y-12">
+      <div className="space-y-2 md:space-y-4">
+        <h2 className="text-3xl md:text-5xl font-light text-white">
+          experience
+        </h2>
+        <div className="w-24 h-0.5 bg-gradient-to-r from-white to-gray-400 mt-4"></div>
+
+        <p className="text-gray-400 text-base md:text-lg">
           My professional journey and key achievements
         </p>
       </div>
-      <div className="space-y-9">
+
+      <div className="space-y-6 md:space-y-9">
         {experienceData.map((job, index) => (
           <div
             key={index}
-            className="relative pl-8 pb-8 border-l-2 border-gray-700 last:border-l-0"
+            className="relative pl-6 md:pl-8 pb-6 md:pb-8 border-l-2 border-gray-700 last:border-l-0"
           >
             <div className="absolute -left-2 top-0 w-4 h-4 bg-gradient-to-r from-gray-500 to-white rounded-full"></div>
-            <div className="space-y-4">
+
+            <div className="space-y-3 md:space-y-4">
               <div>
-                <div className="text-gray-400 text-m">{job.period}</div>
-                <h3 className="text-2xl text-white font-medium">{job.title}</h3>
-                <div className="text-white/60 font-medium">{job.company}</div>
+                <div className="text-gray-400 text-sm md:text-base">
+                  {job.period}
+                </div>
+                <h3 className="text-xl md:text-2xl text-white font-medium">
+                  {job.title}
+                </h3>
+                <div className="text-white/60 text-sm md:text-base font-medium">
+                  {job.company}
+                </div>
               </div>
-              <p className="text-gray-300 leading-relaxed">{job.description}</p>
-              <div className="flex flex-wrap gap-3">
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                {job.description}
+              </p>
+              <div className="flex flex-wrap gap-2 md:gap-3">
                 {job.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className="flex items-center space-x-3 px-4 py-1 bg-gray-800 text-gray-400 hover:text-white text-sm rounded-full"
+                    className="flex items-center space-x-2 md:space-x-3 px-3 py-0.5 md:px-4 md:py-1 bg-gray-800 text-gray-400 hover:text-white text-xs md:text-sm rounded-full"
                   >
-                    <tech.icon className="w-6 h-7" />
+                    <tech.icon className="w-4 h-5 md:w-6 md:h-7" />
                     <span>{tech.name}</span>
                   </span>
                 ))}

@@ -51,12 +51,12 @@ export function DiscordJS(props) {
   );
 }
 
-// This component only renders the screenshot
+// screenshot
 const ProjectScreenshotPlaceholder = ({ image }) => {
   if (!image) {
     return (
-      <div className="relative w-full h-48 flex items-center justify-center bg-gray-700/50 rounded-lg overflow-hidden border border-gray-700 mb-6">
-        <span className="text-gray-500 font-medium text-lg">
+      <div className="relative w-full h-32 md:h-48 flex items-center justify-center bg-gray-700/50 rounded-lg overflow-hidden border border-gray-700 mb-4 md:mb-6">
+        <span className="text-gray-500 font-medium text-sm md:text-lg">
           Project Screenshot
         </span>
       </div>
@@ -64,7 +64,7 @@ const ProjectScreenshotPlaceholder = ({ image }) => {
   }
 
   return (
-    <div className="relative w-full h-48 bg-gray-700/50 rounded-lg overflow-hidden border border-gray-700 mb-6">
+    <div className="relative w-full h-32 md:h-48 bg-gray-700/50 rounded-lg overflow-hidden border border-gray-700 mb-4 md:mb-6">
       <img
         src={image.url}
         alt="Project Screenshot"
@@ -94,17 +94,34 @@ const projectsData = [
     screenshot: null,
   },
   {
-    title: "UnderDog Studios",
-    description: "Website built for a roblox studio showcasing their work.",
+    title: "One Take Studios",
+    description:
+      "A beautifully crafted website for One Take Studios, with my touch of elegance.",
     techStack: [
       { name: "Next.js", icon: SiNextdotjs },
-      { name: "Express", icon: SiExpress },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Javascript", icon: SiJavascript },
+      { name: "Vercel", icon: SiVercel },
     ],
     status: "Live",
-    link: "https://underdogstudios.org/",
-    logo: "https://underdogstudios.org/img/o.png",
+    link: "https://www.onetakestudios.org/",
+    logo: "https://www.onetakestudios.org/_next/static/media/ots-logo.9050ba54.webp",
+    screenshot: null,
+  },
+  {
+    title: "SplashedDev",
+    description:
+      "A portfolio crafted for an experienced Roblox Developer & 3D modeller with glass-morph style.",
+    techStack: [
+      { name: "React", icon: SiReact },
+      { name: "Javascript", icon: SiJavascript },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Vercel", icon: SiVercel },
+      { name: "Express", icon: SiExpress },
+    ],
+    status: "Live",
+    link: "https://www.splasheddev.com",
+    logo: "https://www.splasheddev.com/assets/profile_pic-CjrnTj6l.png",
     screenshot: null,
   },
   {
@@ -121,9 +138,8 @@ const projectsData = [
       { name: "Redis", icon: DiRedis },
       { name: "Express", icon: SiExpress },
       { name: "Litecoin", icon: SiLitecoin },
-      { name: "Javascript", icon: SiJavascript },
     ],
-    status: "Live",
+    status: "Dead",
     link: "#",
     logo: LiteClash,
     screenshot: null,
@@ -132,15 +148,15 @@ const projectsData = [
 
 const ProjectsContent = () => {
   return (
-    <div className="space-y-12">
-      <div className="space-y-4">
-        <h2 className="text-5xl font-light text-white">projects</h2>
-        <div className="w-30 h-0.5 bg-gradient-to-r from:white to-gray-400 mt-4"></div>
-        <p className="text-gray-400 text-lg">
+    <div className="space-y-6 md:space-y-12">
+      <div className="space-y-2 md:space-y-4">
+        <h2 className="text-3xl md:text-5xl font-light text-white">projects</h2>
+        <div className="w-24 h-0.5 bg-gradient-to-r from-white to-gray-400 mt-4"></div>
+        <p className="text-gray-400 text-base md:text-lg">
           Featured work and recent developments
         </p>
       </div>
-      <div className="grid gap-8">
+      <div className="grid gap-6 md:gap-8">
         {projectsData.map((project, index) => (
           <a
             key={index}
@@ -149,23 +165,23 @@ const ProjectsContent = () => {
             rel="noopener noreferrer"
             className="block"
           >
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8 hover:border-gray-700 transition-all duration-300 group">
+            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-4 md:p-8 hover:border-gray-700 transition-all duration-300 group">
               {project.screenshot && (
                 <ProjectScreenshotPlaceholder
                   image={{ url: project.screenshot }}
                 />
               )}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <div className="flex items-start justify-between">
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-3 md:space-x-4">
                     {project.logo && (
                       <img
                         src={project.logo}
                         alt={`${project.title} Logo`}
-                        className="w-10 h-10 object-contain rounded-md"
+                        className="w-8 h-8 md:w-10 md:h-10 object-contain rounded-md"
                       />
                     )}
-                    <h3 className="text-2xl text-white font-medium group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl md:text-2xl text-white font-medium group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h3>
                   </div>
@@ -174,26 +190,26 @@ const ProjectsContent = () => {
                       className={`px-3 py-1 text-xs rounded-full ${
                         project.status === "Live"
                           ? "bg-green-500/20 text-green-400"
-                          : "bg-yellow-500/20 text-yellow-400"
+                          : "bg-yellow-500/20 text-red-400"
                       }`}
                     >
                       {project.status}
                     </span>
                     {project.link && (
-                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                      <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-white transition-colors" />
                     )}
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {project.techStack.map((tech, i) => (
                     <span
                       key={i}
-                      className="flex items-center space-x-2 px-3 py-1 bg-gray-800 text-gray-400 hover:text-white text-sm rounded-full border border-gray-700"
+                      className="flex items-center space-x-1.5 md:space-x-2 px-2 py-0.5 md:px-3 md:py-1 bg-gray-800 text-gray-400 hover:text-white text-xs md:text-sm rounded-full border border-gray-700"
                     >
-                      <tech.icon className="w-4 h-4" />
+                      <tech.icon className="w-3 h-3 md:w-4 md:h-4" />
                       <span>{tech.name}</span>
                     </span>
                   ))}
@@ -202,7 +218,7 @@ const ProjectsContent = () => {
             </div>
           </a>
         ))}
-        <p className="text-center">& many more.</p>
+        <p className="text-center text-sm md:text-base">& many more.</p>
       </div>
     </div>
   );
