@@ -5,10 +5,15 @@ const Content = ({ contentRef, sectionRefs, sections }) => {
   return (
     <div
       ref={contentRef}
-      className="flex-1 ml-60 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
+      className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
       style={{ height: "100vh" }}
     >
-      <div className="max-w-5xl mx-auto px-12">
+      <div
+        className="max-w-5xl mx-auto px-4 sm:px-8"
+        style={{
+          marginLeft: window.innerWidth <= 768 ? "4.5rem" : "15rem",
+        }}
+      >
         {sections.map((section) => (
           <Section
             key={section.id}
