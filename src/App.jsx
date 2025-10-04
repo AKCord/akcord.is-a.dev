@@ -3,9 +3,8 @@ import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
 import { navigationItems, socialIcons, sections } from "./components/data";
 import ReactGA from "react-ga4";
-require("dotenv").config(1);
 
-const TRACKING_ID = process.env.GOOGLE_ANALYTICS_ID;
+const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
 ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
