@@ -4,8 +4,8 @@ import Content from "./components/Content";
 import { navigationItems, socialIcons, sections } from "./components/data";
 import ReactGA from "react-ga4";
 
-const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
-ReactGA.initialize(TRACKING_ID);
+// const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
+// ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   const [activeSection, setActiveSection] = useState("about");

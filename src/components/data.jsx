@@ -4,9 +4,9 @@ import {
   Briefcase,
   Code,
   Mail,
-  Github,
-  Linkedin,
-  Twitter,
+  // Github,
+  // Linkedin,
+  // Twitter,
   ExternalLink,
   Download,
   MapPin,
@@ -26,9 +26,9 @@ export const navigationItems = [
 ];
 
 export const socialIcons = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  // { icon: Github, href: "#", label: "GitHub" },
+  // { icon: Linkedin, href: "#", label: "LinkedIn" },
+  // { icon: Twitter, href: "#", label: "Twitter" },
 ];
 
 export const sections = [
